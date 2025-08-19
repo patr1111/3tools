@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>簡易チャットボットツール比較表</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        .comparison-table {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .tool-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .miibo-accent { border-left: 4px solid #10B981; }
+        .dify-accent { border-left: 4px solid #3B82F6; }
+        .gpts-accent { border-left: 4px solid #EF4444; }
+        .feature-explanation {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        .pros { background-color: #DCFCE7; border-left: 4px solid #16A34A; }
+        .cons { background-color: #FEE2E2; border-left: 4px solid #DC2626; }
+    </style>
+</head>
+<body class="bg-gray-50 p-6">
+    <div class="max-w-7xl mx-auto">
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">
+                <i class="fas fa-robot mr-3 text-blue-600"></i>
+                簡易チャットボットツール比較表
+            </h1>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                miibo、dify、GPTsの3つの主要なチャットボット構築ツールを詳細に比較しています。
+                初心者の方にも分かりやすいよう、各項目の意味と重要性を詳しく解説します。
+            </p>
+        </div>
+
+        <!-- Main Comparison Table -->
+        <div class="comparison-table bg-white rounded-xl overflow-hidden mb-8">
+            <table class="w-full">
+                <thead>
+                    <tr class="tool-header text-white">
+                        <th class="p-4 text-left font-bold text-lg">比較項目</th>
+                        <th class="p-4 text-center font-bold text-lg miibo-accent bg-green-600">
+                            <i class="fas fa-shield-alt mr-2"></i>miibo<br>
+                            <span class="text-sm font-normal">(スタンダード)</span>
+                        </th>
+                        <th class="p-4 text-center font-bold text-lg dify-accent bg-blue-600">
+                            <i class="fas fa-cogs mr-2"></i>dify<br>
+                            <span class="text-sm font-normal">(プロフェッショナル)</span>
+                        </th>
+                        <th class="p-4 text-center font-bold text-lg gpts-accent bg-red-600">
+                            <i class="fab fa-openai mr-2"></i>GPTs<br>
+                            <span class="text-sm font-normal">(プラス)</span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Price -->
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="p-4 font-semibold bg-gray-100">
+                            <i class="fas fa-yen-sign mr-2 text-green-600"></i>
+                            月額料金
+                        </td>
+                        <td class="p-4 text-center miibo-accent">
+                            <span class="text-2xl font-bold text-green-600">¥9,800</span>
+                        </td>
+                        <td class="p-4 text-center dify-accent">
+                            <span class="text-2xl font-bold text-blue-600">$59</span><br>
+                            <span class="text-sm text-gray-500">(約8,850円)</span>
+                        </td>
+                        <td class="p-4 text-center gpts-accent">
+                            <span class="text-2xl font-bold text-red-600">$20</span><br>
+                            <span class="text-sm text-gray-500">(約3,000円)</span>
+                        </td>
+                    </tr>
+
+                    <!-- Conversation Limit -->
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="p-4 font-semibold bg-gray-100">
+                            <i class="fas fa-comments mr-2 text-purple-600"></i>
+                            会話数制限
+                        </td>
+                        <td class="p-4 text-center miibo-accent">
+                            <span class="text-xl font-bold text-green-600">2,000会話</span><br>
+                            <span class="text-sm text-gray-500">月間制限</span>
+                        </td>
+                        <td class="p-4 text-center dify-accent">
+                            <span class="text-xl font-bold text-blue-600">500会話</span><br>
+                            <span class="text-sm text-gray-500">月間制限</span>
+                        </td>
+                        <td class="p-4 text-center gpts-accent">
+                            <span class="text-xl font-bold text-red-600">80回</span><br>
+                            <span class="text-sm text-gray-500">3時間制限</span>
+                        </td>
+                    </tr>
+
+                    <!-- Agents -->
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="p-4 font-semibold bg-gray-100">
+                            <i class="fas fa-user-robot mr-2 text-orange-600"></i>
+                            エージェント数
+                        </td>
+                        <td class="p-4 text-center miibo-accent">
+                            <span class="text-xl font-bold text-green-600">5エージェント</span>
+                        </td>
+                        <td class="p-4 text-center dify-accent">
+                            <span class="text-xl font-bold text-blue-600">50エージェント</span>
+                        </td>
+                        <td class="p-4 text-center gpts-accent">
+                            <span class="text-xl font-bold text-red-600">無制限</span>
+                        </td>
+                    </tr>
+
+                    <!-- Knowledge Base -->
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="p-4 font-semibold bg-gray-100">
+                            <i class="fas fa-database mr-2 text-teal-600"></i>
+                            ナレッジベース
+                        </td>
+                        <td class="p-4 text-center miibo-accent">
+                            <span class="text-xl font-bold text-green-600">100</span><br>
+                            <span class="text-sm text-gray-500">ファイル数</span>
+                        </td>
+                        <td class="p-4 text-center dify-accent">
+                            <span class="text-xl font-bold text-blue-600">500</span><br>
+                            <span class="text-sm text-gray-500">ファイル数</span>
+                        </td>
+                        <td class="p-4 text-center gpts-accent">
+                            <span class="text-xl font-bold text-red-600">20</span><br>
+                            <span class="text-sm text-gray-500">ファイル数</span>
+                        </td>
+                    </tr>
+
+                    <!-- Admin Users -->
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="p-4 font-semibold bg-gray-100">
+                            <i class="fas fa-users-cog mr-2 text-indigo-600"></i>
+                            管理者数
+                        </td>
+                        <td class="p-4 text-center miibo-accent">
+                            <span class="text-xl font-bold text-green-600">5人</span>
+                        </td>
+                        <td class="p-4 text-center dify-accent">
+                            <span class="text-xl font-bold text-blue-600">3人</span>
+                        </td>
+                        <td class="p-4 text-center gpts-accent">
+                            <span class="text-xl font-bold text-red-600">1人</span>
+                        </td>
+                    </tr>
+
+                    <!-- System Prompt Limit -->
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="p-4 font-semibold bg-gray-100">
+                            <i class="fas fa-file-code mr-2 text-pink-600"></i>
+                            システムプロンプト制限
+                        </td>
+                        <td class="p-4 text-center miibo-accent">
+                            <span class="text-xl font-bold text-green-600">6,000文字</span>
+                        </td>
+                        <td class="p-4 text-center dify-accent">
+                            <span class="text-xl font-bold text-blue-600">無制限</span>
+                        </td>
+                        <td class="p-4 text-center gpts-accent">
+                            <span class="text-xl font-bold text-red-600">6,000-8,000文字</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Feature Explanations -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            <div class="feature-explanation">
+                <h3 class="text-xl font-bold mb-3"><i class="fas fa-comments mr-2"></i>会話数制限とは？</h3>
+                <p>チャットボットがユーザーと行える会話のやり取り回数の上限です。miiboは月間2,000回、difyは月間500回、GPTsは3時間で80回という制限があります。利用量が多い場合は、miiboが最も余裕があります。</p>
+            </div>
+            
+            <div class="feature-explanation">
+                <h3 class="text-xl font-bold mb-3"><i class="fas fa-user-robot mr-2"></i>エージェント数とは？</h3>
+                <p>作成できるチャットボット（AI エージェント）の数です。用途別に複数のボットを作りたい場合に重要です。difyが50個、GPTsが無制限で、複数ボット運用には適しています。</p>
+            </div>
+            
+            <div class="feature-explanation">
+                <h3 class="text-xl font-bold mb-3"><i class="fas fa-database mr-2"></i>ナレッジベースとは？</h3>
+                <p>チャットボットに学習させることができる文書ファイル数です。企業の資料やマニュアルなどを読み込ませて、より正確な回答をさせるために使用します。difyが500ファイルで最も多く登録できます。</p>
+            </div>
+            
+            <div class="feature-explanation">
+                <h3 class="text-xl font-bold mb-3"><i class="fas fa-file-code mr-2"></i>システムプロンプトとは？</h3>
+                <p>チャットボットの基本的な性格や回答方法を設定するための指示文です。文字数制限が緩いほど、詳細で複雑な設定が可能になります。difyは無制限で最も自由度が高いです。</p>
+            </div>
+        </div>
+
+        <!-- Detailed Analysis for Each Tool -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+            <!-- miibo -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="bg-green-600 text-white p-4">
+                    <h3 class="text-xl font-bold"><i class="fas fa-shield-alt mr-2"></i>miibo</h3>
+                    <p class="text-sm opacity-90">国内企業の安心感重視</p>
+                </div>
+                <div class="p-4">
+                    <div class="pros p-3 mb-3 rounded">
+                        <h4 class="font-bold text-green-700 mb-2"><i class="fas fa-thumbs-up mr-2"></i>メリット</h4>
+                        <ul class="text-sm space-y-1">
+                            <li>• 国内ベンチャーでISMS取得済み</li>
+                            <li>• 複数の言語モデル対応（OpenAI、Claude、Gemini）</li>
+                            <li>• アースアイズが正規パートナーで実績あり</li>
+                            <li>• 管理者を5人まで設定可能</li>
+                            <li>• 月間2,000会話と余裕のある制限</li>
+                        </ul>
+                    </div>
+                    <div class="cons p-3 rounded">
+                        <h4 class="font-bold text-red-700 mb-2"><i class="fas fa-thumbs-down mr-2"></i>デメリット</h4>
+                        <ul class="text-sm space-y-1">
+                            <li>• 価格が最も高い（¥9,800）</li>
+                            <li>• エージェント数が5個と少なめ</li>
+                            <li>• ナレッジベース100ファイル制限</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- dify -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="bg-blue-600 text-white p-4">
+                    <h3 class="text-xl font-bold"><i class="fas fa-cogs mr-2"></i>dify</h3>
+                    <p class="text-sm opacity-90">機能性とコスパのバランス</p>
+                </div>
+                <div class="p-4">
+                    <div class="pros p-3 mb-3 rounded">
+                        <h4 class="font-bold text-green-700 mb-2"><i class="fas fa-thumbs-up mr-2"></i>メリット</h4>
+                        <ul class="text-sm space-y-1">
+                            <li>• 日本で最もメジャーなツール</li>
+                            <li>• エージェント数50個と豊富</li>
+                            <li>• ナレッジベース500ファイル</li>
+                            <li>• システムプロンプト無制限</li>
+                            <li>• 複雑な連携機能が充実</li>
+                            <li>• 複数言語モデル対応</li>
+                        </ul>
+                    </div>
+                    <div class="cons p-3 rounded">
+                        <h4 class="font-bold text-red-700 mb-2"><i class="fas fa-thumbs-down mr-2"></i>デメリット</h4>
+                        <ul class="text-sm space-y-1">
+                            <li>• 中国企業運営</li>
+                            <li>• サポート品質が低い</li>
+                            <li>• 会話数制限が500回と少なめ</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GPTs -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="bg-red-600 text-white p-4">
+                    <h3 class="text-xl font-bold"><i class="fab fa-openai mr-2"></i>GPTs</h3>
+                    <p class="text-sm opacity-90">シンプル・低コスト</p>
+                </div>
+                <div class="p-4">
+                    <div class="pros p-3 mb-3 rounded">
+                        <h4 class="font-bold text-green-700 mb-2"><i class="fas fa-thumbs-up mr-2"></i>メリット</h4>
+                        <ul class="text-sm space-y-1">
+                            <li>• OpenAI社の公式サービス</li>
+                            <li>• 最も低コスト（$20）</li>
+                            <li>• エージェント数無制限</li>
+                            <li>• 設定が簡単</li>
+                        </ul>
+                    </div>
+                    <div class="cons p-3 rounded">
+                        <h4 class="font-bold text-red-700 mb-2"><i class="fas fa-thumbs-down mr-2"></i>デメリット</h4>
+                        <ul class="text-sm space-y-1">
+                            <li>• OpenAIモデルのみ使用可能</li>
+                            <li>• 複数名での管理が困難</li>
+                            <li>• ナレッジベース20ファイル制限</li>
+                            <li>• 3時間80回の厳しい制限</li>
+                            <li>• 企業利用には機能不足</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recommendation -->
+        <div class="bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-4"><i class="fas fa-star mr-3"></i>推奨ツール選択指針</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-white bg-opacity-20 rounded-lg p-4">
+                    <h3 class="font-bold mb-2"><i class="fas fa-building mr-2"></i>企業利用・安心重視</h3>
+                    <p class="text-sm">セキュリティと国内サポートを重視する企業には<strong>miibo</strong>がおすすめ。価格は高いが、信頼性とサポート体制が充実。</p>
+                </div>
+                <div class="bg-white bg-opacity-20 rounded-lg p-4">
+                    <h3 class="font-bold mb-2"><i class="fas fa-balance-scale mr-2"></i>機能性・コスパ重視</h3>
+                    <p class="text-sm">機能と価格のバランスを求めるなら<strong>dify</strong>。豊富な機能と無制限のシステムプロンプトが魅力的。</p>
+                </div>
+                <div class="bg-white bg-opacity-20 rounded-lg p-4">
+                    <h3 class="font-bold mb-2"><i class="fas fa-rocket mr-2"></i>簡単・低コスト</h3>
+                    <p class="text-sm">個人利用や簡単な用途には<strong>GPTs</strong>。最も手軽に始められるが、企業利用には制限が多い。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="bg-white rounded-xl shadow-lg p-6">
+            <h2 class="text-2xl font-bold mb-4 text-center"><i class="fas fa-clipboard-check mr-3 text-blue-600"></i>総合評価まとめ</h2>
+            <div class="text-center mb-4">
+                <p class="text-lg text-gray-700">
+                    AICC検証でシステムプロンプト数が重要な要素となる場合、<strong class="text-blue-600">difyの無制限</strong>は大きな魅力です。
+                    miiboの6,000文字制限も改善されましたが、複雑な設定には制限があります。
+                </p>
+            </div>
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-4">
+                <h3 class="font-bold text-blue-800 mb-2"><i class="fas fa-lightbulb mr-2"></i>専門家の見解</h3>
+                <p class="text-blue-700">
+                    「汎用性も高く個人的にはDifyで良いと思う」との評価通り、機能面での柔軟性とコストパフォーマンスを考慮すると、
+                    <strong>dify</strong>が最もバランスの取れた選択肢と言えます。ただし、サポート品質には注意が必要です。
+                </p>
+            </div>
+            <div class="text-center">
+                <p class="text-sm text-gray-600">
+                    最終的な選択は、組織の予算、セキュリティ要件、利用規模、サポート体制の重要度によって決定することをお勧めします。
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
